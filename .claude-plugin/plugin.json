@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "claude-router",
+  "displayName": "Claude Router",
+  "version": "0.1.0",
+  "description": "Classifies and logs your Claude Code prompts.",
+  "author": {
+    "name": "Your Name",
+    "email": "you@example.com"
+  },
+  "license": "MIT",
+  "hooks": "./hooks/hooks.json"
+}
