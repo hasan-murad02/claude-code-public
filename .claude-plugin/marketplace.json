@@ -8,11 +8,7 @@
   "plugins": [
     {
       "name": "claude-router",
-      "source": {
-        "type": "github",
-        "owner": "hasan-murad02",
-        "repo": "claude-code-public"
-      },
+      "source": "./",
       "description": "Classifies and logs your Claude Code prompts.",
       "version": "0.1.0"
     }
