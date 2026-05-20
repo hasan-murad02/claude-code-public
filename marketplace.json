@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-marketplace.json",
+  "name": "hasan-murad02",
+  "owner": {
+    "name": "hasan-murad02",
+    "email": "hasan.murad0203@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "claude-router",
+      "source": "github:hasan-murad02/claude-code-public",
+      "description": "Classifies and logs your Claude Code prompts.",
+      "version": "0.1.0"
+    }
+  ]
+}

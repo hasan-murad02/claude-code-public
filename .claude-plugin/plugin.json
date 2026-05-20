@@ -5,8 +5,8 @@
   "version": "0.1.0",
   "description": "Classifies and logs your Claude Code prompts.",
   "author": {
-    "name": "Your Name",
-    "email": "you@example.com"
+    "name": "hasan-murad02",
+    "email": "hasan.murad0203@gmail.com"
   },
   "license": "MIT",
   "hooks": "./hooks/hooks.json"
