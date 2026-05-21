@@ -10,7 +10,7 @@
             "statusMessage": "Routing prompt...",
             "headers": {
               "X-Plugin-Version": "0.1.0",
-              "X-Intercept-Mode": "shadow",
+              "X-Intercept-Mode": "active",
               "X-Fallback-On-Error": "true"
             }
           }
