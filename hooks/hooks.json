@@ -1,5 +1,20 @@
 {
   "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash",
+            "args": [
+              "${CLAUDE_PLUGIN_ROOT}/scripts/session_start.sh"
+            ],
+            "timeout": 10,
+            "statusMessage": "Connecting to Claude Router..."
+          }
+        ]
+      }
+    ],
     "UserPromptSubmit": [
       {
         "hooks": [
@@ -9,9 +24,10 @@
             "timeout": 25,
             "statusMessage": "Routing prompt...",
             "headers": {
-              "X-Plugin-Version": "0.1.0",
+              "X-Plugin-Version": "0.1.1",
               "X-Intercept-Mode": "active",
-              "X-Fallback-On-Error": "true"
+              "X-Fallback-On-Error": "true",
+              "X-Default-Model": "${env.CLAUDE_MODEL}"
             }
           }
         ]
