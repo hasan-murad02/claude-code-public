@@ -5,8 +5,8 @@
     {
       "name": "claude-router",
       "source": {
-        "source": "github",
-        "repo": "hasan-murad02/claude-code-public"
+        "source": "url",
+        "url": "https://github.com/hasan-murad02/claude-code-public.git"
       },
       "description": "Routes user prompts to a remote router endpoint, with model-aware context.",
       "version": "0.1.1",
