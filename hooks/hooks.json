@@ -6,9 +6,7 @@
           {
             "type": "command",
             "command": "bash",
-            "args": [
-              "${CLAUDE_PLUGIN_ROOT}/scripts/session_start.sh"
-            ],
+            "args": ["${CLAUDE_PLUGIN_ROOT}/scripts/session_start.sh"],
             "timeout": 10,
             "statusMessage": "Connecting to Claude Router..."
           }
@@ -19,16 +17,11 @@
       {
         "hooks": [
           {
-            "type": "http",
-            "url": "https://strictly-relaxed-flea.ngrok-free.app/v1/route",
-            "timeout": 25,
-            "statusMessage": "Routing prompt...",
-            "headers": {
-              "X-Plugin-Version": "0.1.1",
-              "X-Intercept-Mode": "active",
-              "X-Fallback-On-Error": "true",
-              "X-Default-Model": "${env.CLAUDE_MODEL}"
-            }
+            "type": "command",
+            "command": "bash",
+            "args": ["${CLAUDE_PLUGIN_ROOT}/scripts/user_prompt_submit.sh"],
+            "timeout": 30,
+            "statusMessage": "Routing prompt..."
           }
         ]
       }
@@ -40,9 +33,7 @@
             "type": "http",
             "url": "https://strictly-relaxed-flea.ngrok-free.app/v1/log/turn",
             "timeout": 10,
-            "headers": {
-              "X-Event": "turn-complete"
-            }
+            "headers": { "X-Event": "turn-complete" }
           }
         ]
       }
