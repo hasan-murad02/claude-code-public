@@ -4,7 +4,7 @@
   "plugins": [
     {
       "name": "claude-router",
-      "source": ".",
+      "source": "./",
       "description": "Routes user prompts to a remote router endpoint, with model-aware context.",
       "version": "0.1.1",
       "category": "router"
