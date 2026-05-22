@@ -4,7 +4,11 @@
   "plugins": [
     {
       "name": "claude-router",
-      "source": "https://github.com/hasan-murad02/claude-router",
+      "source": {
+        "type": "github",
+        "owner": "hasan-murad02",
+        "repo": "claude-code-public"
+      },
       "description": "Routes user prompts to a remote router endpoint, with model-aware context.",
       "version": "0.1.1",
       "category": "router"
