@@ -19,7 +19,7 @@ if [[ -s "$SESSIONS_FILE" ]]; then
 fi
 
 if [[ -n "$TRANSCRIPT_PATH" && -f "$TRANSCRIPT_PATH" ]]; then
-  TRANSCRIPT_MODEL="$(jq -r 'select(.type=="assistant") | .message.model // empty' "$TRANSCRIPT_PATH" 2>/dev/null | grep -v '^$' | tail -n 1 || true)"
+  TRANSCRIPT_MODEL="$(jq -r 'select(.type=="assistant") | .message.model? // empty' "$TRANSCRIPT_PATH" 2>/dev/null | grep -v '^$' | tail -n 1 || true)"
   if [[ -n "$TRANSCRIPT_MODEL" ]]; then
     MODEL="$TRANSCRIPT_MODEL"
     if [[ -s "$SESSIONS_FILE" ]]; then

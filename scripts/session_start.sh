@@ -15,8 +15,8 @@ if ! command -v jq >/dev/null 2>&1; then
 fi
 
 SESSION_ID="$(echo "$INPUT" | jq -r '.session_id // empty')"
-MODEL_ID="$(echo "$INPUT" | jq -r '(.model.id // .model // empty)')"
-DISPLAY_NAME="$(echo "$INPUT" | jq -r '(.model.display_name // .model.id // .model // empty)')"
+MODEL_ID="$(echo "$INPUT" | jq -r '(.model.id? // .model // empty)')"
+DISPLAY_NAME="$(echo "$INPUT" | jq -r '(.model.display_name? // .model.id? // .model // empty)')"
 SOURCE="$(echo "$INPUT" | jq -r '.source // "startup"')"
 TRANSCRIPT_PATH="$(echo "$INPUT" | jq -r '.transcript_path // empty')"
 CWD="$(echo "$INPUT" | jq -r '.cwd // empty')"
